@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="BroiniSistemi/BroiniSistemi.csproj" />
+  <Project Path="DeterminantaMatrica/DeterminantaMatrica.csproj" />
+  <Project Path="KombinatorikaPKV/KombinatorikaPKV.csproj" />
+  <Project Path="KoreniPolinom/KoreniPolinom.csproj" />
+  <Project Path="Matematicheski-Osnovi-Zadachi/Matematicheski-Osnovi-Zadachi.csproj" />
+  <Project Path="NaiKasVektor/NaiKasVektor.csproj" />
+  <Project Path="OperaciiMnojestva/OperaciiMnojestva.csproj" />
+  <Project Path="StatisticheskiDanni/StatisticheskiDanni.csproj" />
+  <Project Path="VeroiatnostZar/VeroiatnostZar.csproj" />
+</Solution>
