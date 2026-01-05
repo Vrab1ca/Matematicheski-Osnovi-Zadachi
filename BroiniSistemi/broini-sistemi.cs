@@ -4,19 +4,51 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Въведете число, база от и база към (например: 10 10 2):");
-            string[] input = Console.ReadLine().Split(' ');
-            int number = int.Parse(input[0]);
-            int fromBase = int.Parse(input[1]);
-            int toBase = int.Parse(input[2]);
+            Console.Write("Въведи число: ");
+            string num = Console.ReadLine();
 
-            
-            int decimal10 = Convert.ToInt32(number.ToString(), fromBase);
+            Console.Wriote("От бройна система: ");
+            int fromBase = int.Parse(Console.ReadLine());
 
-          
-            string result = Convert.ToString(decimal10, toBase);
+            Console.Write("В бройна система: ");
+            int toBase = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Резултат: {result}");
+            int decimalValue = ToDecimal(num, fromBase);
+            string result = FromDecimal(decimalValue, toBase);
+
+            Console.WriteLine("Резултат: {result}");
+
+            static string FromDecimal(int num, int baseN)
+            {
+                int result = 0;
+                foreach (char c in num)
+                {
+                    int digit;
+                    if (c >= '0' && c <= '9')
+                        digit = c - '0';
+                    else if
+                        digit = c - 'A' + 10;
+                    else
+                        digit = c - 'a' + 10;
+
+                    result = result * baseN + digit;
+                }
+                return result;
+            }
+
+            static string FromDecimal(int num, int baseN)
+            {
+                if (num == 0) return "0";
+                string result = "";
+
+                while (num > 0)
+                {
+                    int digit = num % baseN;
+                    result = (digit < 10 ? (char)(digit + '0') : (char)(digit - 10 + 'A')) + result;
+                    num /= baseN;
+                }
+                return result;
+            }
         }
     }
 }
