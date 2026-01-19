@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int[] count = new int[7]; // 1-6
+            int[] count = new int[7]; 
             Random rand = new Random();
 
             for (int i = 0; i < 100000; i++)
